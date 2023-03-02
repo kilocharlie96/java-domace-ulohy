@@ -7,12 +7,6 @@ import java.util.regex.Pattern;
 public class ScannerClass {
 
 /*
-1. úloha: Napíš metódu, ktorá bude čítať dáta z konzoly. Teda to čo napíšeš na konzolu a stlačíš enter, to sa vypíše. Čítať dáta bude dovtedy kým nenapíšeš q a nestlačíš enter.
-
-2. úloha: Napíš si triedu Osoba, ktorá bude mať meno a priezvisko. Potom napíš metódu, ktorá si bude z konzoly pýtať zadanie mena a priezviska a na základe údajov z konzoly vytvorí inštanciu Osoby. Teda niečo ako new Osoba(menoZKonzoly, priezviskoZKonzoly)
-
-3. úloha: Napíš metódu, ktorá požiada používateľa o zadanie čísla. Ak zadá číslo vypíš ho na konzolu, ak zadá niečo iné, tak vypíš chybovú hlášku.
-
 4.úloha: napíš metódu, ktorá načíta z konzoly jednoduché matematické operácie a vykoná ich. Napríklad ak napíšem do konzoly 4+5. Tak sa vykoná sčítanie a na výstup sa napíše výsledok 9.
 
 5. úloha: napíš metódu, ktorá na vstupe bude akceptovať dáta typu LocalTime, ktorý bude reprezentovať čas nástupu do práce. Na výstupe bude výpis, kedy môžeš odísť z práce. Uvažuje nad 8hodinovou pracovnou dobou.
@@ -24,7 +18,11 @@ public class ScannerClass {
 8. úloha: napíš metódu, ktorá vypíše na konzolu či je dnes práve sviatok. Dátumy sviatkov si môžeš pozrieť napríklad tu: http://kalendar.azet.sk/sviatky/. Veľkú noc nemusíš riešiť.
 */
 
-    //01.
+
+
+//01.
+//  úloha: Napíš metódu, ktorá bude čítať dáta z konzoly. Teda to čo napíšeš na konzolu a stlačíš enter, to sa vypíše. Čítať dáta bude dovtedy kým nenapíšeš q a nestlačíš enter.
+
     public static void scanner(){
         Scanner scanner = new Scanner(System.in);
          while (true) {
@@ -40,7 +38,10 @@ public class ScannerClass {
         }
     }
 
-    //02.
+
+//02.
+//  úloha: Napíš si triedu Osoba, ktorá bude mať meno a priezvisko. Potom napíš metódu, ktorá si bude z konzoly pýtať zadanie mena a priezviska a na základe údajov z konzoly vytvorí inštanciu Osoby. Teda niečo ako new Osoba(menoZKonzoly, priezviskoZKonzoly).
+
     public static void vytvorOsobu(){
         Scanner scanner = new Scanner(System.in);
         String meno;
@@ -55,7 +56,9 @@ public class ScannerClass {
         System.out.printf("Meno: %s\nPriezvisko: %s", osoba.getMeno(), osoba.getPriezvisko());
     }
 
-    //03.
+
+//03.
+//  úloha: Napíš metódu, ktorá požiada používateľa o zadanie čísla. Ak zadá číslo vypíš ho na konzolu, ak zadá niečo iné, tak vypíš chybovú hlášku.
     public static void vypisCislo(){
         Scanner scanner = new Scanner(System.in);
         String number;
