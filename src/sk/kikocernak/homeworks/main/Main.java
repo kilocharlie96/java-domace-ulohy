@@ -10,6 +10,7 @@ public class Main {
 //        System.out.println(simpleCheckEmailFormat("jurosavsa@gmail.com"));
 //        scanner();
 //        vytvorOsobu();
-        vypisCislo();
+//        vypisCislo();
+        pocitaj();
     }
 }
