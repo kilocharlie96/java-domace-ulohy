@@ -146,4 +146,13 @@ public class ScannerClass {
         System.out.println("Váš príchod do práce: " + localTime.truncatedTo(ChronoUnit.SECONDS));
         System.out.println("Váš predpokladaný odchod z práce: " + localTime.truncatedTo(ChronoUnit.SECONDS).plusHours(8));
     }
+
+
+
+//06.
+//      úloha: napíš metódu s tým istým názvom ako v úlohe 5. Táto metóda bude mať ale na vstupe dva údaje, jeden bude údaj typu LocalTime o čase nástupu do práce a druhý údaj bude typu int, ktorý reprezentuje dĺžku pracovnej doby. Na výstupe sa vypíše kedy môžeš ísť domov.
+    public static void pracovnyCas(LocalTime localTime, int duration){
+        System.out.println("Váš príchod do práce: " + localTime.truncatedTo(ChronoUnit.SECONDS));
+        System.out.println("Váš predpokladaný odchod z práce: " + localTime.truncatedTo(ChronoUnit.SECONDS).plusHours(duration));
+    }
 }

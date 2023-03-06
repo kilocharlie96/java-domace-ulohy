@@ -15,6 +15,7 @@ public class Main {
 //        vytvorOsobu();
 //        vypisCislo();
 //        pocitaj();
-        pracovnyCas(LocalTime.now());
+//        pracovnyCas(LocalTime.now());
+        pracovnyCas(LocalTime.now(), 12);
     }
 }
