@@ -2,6 +2,7 @@ package sk.kikocernak.homeworks.citaniedat;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -10,8 +11,6 @@ import java.util.regex.Pattern;
 public class ScannerClass {
 
 /*
-6. úloha: napíš metódu s tým istým názvom ako v úlohe 5. Táto metóda bude mať ale na vstupe dva údaje, jeden bude údaj typu LocalTime o čase nástupu do práce a druhý údaj bude typu int, ktorý reprezentuje dĺžku pracovnej doby. Na výstupe sa vypíše kedy môžeš ísť domov.
-
 7. úloha: napíš metódu, ktorej zadáš tvoj dátum narodenia. Na výstupe sa ti vypíše v aké dni budeš mať v budúcnosti mať narodeniny (2019 pondelok, 2020 štvrtok, atď.)
 
 8. úloha: napíš metódu, ktorá vypíše na konzolu či je dnes práve sviatok. Dátumy sviatkov si môžeš pozrieť napríklad tu: http://kalendar.azet.sk/sviatky/. Veľkú noc nemusíš riešiť.
@@ -154,5 +153,24 @@ public class ScannerClass {
     public static void pracovnyCas(LocalTime localTime, int duration){
         System.out.println("Váš príchod do práce: " + localTime.truncatedTo(ChronoUnit.SECONDS));
         System.out.println("Váš predpokladaný odchod z práce: " + localTime.truncatedTo(ChronoUnit.SECONDS).plusHours(duration));
+    }
+
+
+//07.
+//      úloha: napíš metódu, ktorej zadáš tvoj dátum narodenia. Na výstupe sa ti vypíše v aké dni budeš mať v budúcnosti mať narodeniny (2019 pondelok, 2020 štvrtok, atď.)
+    public static void dniNarodenia(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.printf("Please type your date of birth in format YYYY-MM-DD: ");
+        String datum = scanner.nextLine().substring(4,10);
+        StringBuilder sb = new StringBuilder();
+        LocalDate date = LocalDate.now();
+        sb.append(date.getYear()).append(datum);
+        date = LocalDate.parse(sb);
+
+        for(int i = 0; i<6; i++){
+            date = date.plusYears(i);
+            System.out.println("In " + date.getYear() + " your birthday will be on " + date.getDayOfWeek());
+        }
+
     }
 }

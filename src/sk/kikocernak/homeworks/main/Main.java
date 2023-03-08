@@ -16,6 +16,7 @@ public class Main {
 //        vypisCislo();
 //        pocitaj();
 //        pracovnyCas(LocalTime.now());
-        pracovnyCas(LocalTime.now(), 12);
+//        pracovnyCas(LocalTime.now(), 12);
+        dniNarodenia();
     }
 }
