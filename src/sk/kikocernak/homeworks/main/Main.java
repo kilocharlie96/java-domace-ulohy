@@ -17,6 +17,11 @@ public class Main {
 //        pocitaj();
 //        pracovnyCas(LocalTime.now());
 //        pracovnyCas(LocalTime.now(), 12);
-        dniNarodenia();
+
+        try {
+            dniNarodenia();
+        } catch (Exception e){
+            System.err.println(e.getMessage());
+        }
     }
 }

@@ -158,14 +158,22 @@ public class ScannerClass {
 
 //07.
 //      úloha: napíš metódu, ktorej zadáš tvoj dátum narodenia. Na výstupe sa ti vypíše v aké dni budeš mať v budúcnosti mať narodeniny (2019 pondelok, 2020 štvrtok, atď.)
-    public static void dniNarodenia(){
+    public static void dniNarodenia() {
         Scanner scanner = new Scanner(System.in);
         System.out.printf("Please type your date of birth in format YYYY-MM-DD: ");
-        String datum = scanner.nextLine().substring(4,10);
+        String datum = scanner.nextLine();
+        if(datum.length()!=10){
+            throw new ArithmeticException("Wrong format inserted! Please type YYYY-MM-DD");
+        } else {
+            datum = datum.substring(4,10);
+        }
+
         StringBuilder sb = new StringBuilder();
         LocalDate date = LocalDate.now();
         sb.append(date.getYear()).append(datum);
         date = LocalDate.parse(sb);
+
+
 
         for(int i = 0; i<6; i++){
             date = date.plusYears(i);
