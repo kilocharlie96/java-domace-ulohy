@@ -1,8 +1,10 @@
 package sk.kikocernak.homeworks.citaniedat;
 
+import sk.kikocernak.homeworks.citaniedat.exceptions.InvalidDateFormatException;
+import sk.kikocernak.homeworks.citaniedat.objects.Osoba;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -162,8 +164,10 @@ public class ScannerClass {
         Scanner scanner = new Scanner(System.in);
         System.out.printf("Please type your date of birth in format YYYY-MM-DD: ");
         String datum = scanner.nextLine();
-        if(datum.length()!=10){
-            throw new ArithmeticException("Wrong format inserted! Please type YYYY-MM-DD");
+        Pattern p = Pattern.compile("\\d{4}-\\d{2}-\\d{2}");
+        Matcher m = p.matcher(datum);
+        if(!m.find()){
+            throw new InvalidDateFormatException("Wrong format inserted! Please type YYYY-MM-DD");
         } else {
             datum = datum.substring(4,10);
         }
@@ -181,4 +185,5 @@ public class ScannerClass {
         }
 
     }
+
 }
