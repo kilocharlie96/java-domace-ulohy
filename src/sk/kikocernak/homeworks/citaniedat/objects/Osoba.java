@@ -1,4 +1,4 @@
-package sk.kikocernak.homeworks.citaniedat;
+package sk.kikocernak.homeworks.citaniedat.objects;
 
 public class Osoba {
     private String meno;
